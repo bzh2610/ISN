@@ -45,17 +45,21 @@ void mouseClicked() {
   
   int x_clic=mouseX/100;
   int y_clic=mouseY/100;
-  plateau[x_clic][y_clic]=player;
+
     
   if(player == 1){
-    player++;
+    if( plateau[x_clic][y_clic] == 0 ){
+    plateau[x_clic][y_clic]=1;
+    //player++;
     IA_turn(); 
-}
+    check_plate_state();
+    }
+  }
     
-  else if (player == 2)
-    player--;
+ /* else if (player == 2)
+    player--;*/
     
-  check_plate_state();
+
 }
 
 
@@ -93,15 +97,19 @@ void IA_turn(){
   boolean success=false;
   
   while(success == false){
-  int x = int (random(0, 2));
-  int y = int (random(0, 2));
+  int x = int (random(0, 3));
+  int y = int (random(0, 3));
+  print(x+" "+y+" ");
   
-  if(plateau[x][y] == 0)
+  if(plateau[x][y] == 0){
     success=true;
     plateau[x][y]=2;
+      check_plate_state();
+  }
+   //player--;
   }
   
-  check_plate_state();
+
   
     
 }
