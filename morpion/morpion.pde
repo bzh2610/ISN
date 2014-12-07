@@ -1,8 +1,8 @@
 //BASE :p
-int plateau[][]= new int[3][3];
-int player=1;
-int winner=0;
-boolean partie=true;
+int plateau[][]= new int[3][3]; //plateau
+int player=1; //numero du joueur
+int winner=0; //nom du gagnant
+boolean partie=true; //
 boolean full_plate=false;
 
 
