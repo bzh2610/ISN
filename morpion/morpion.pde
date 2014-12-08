@@ -55,11 +55,6 @@ void mouseClicked() {
     check_plate_state();
     }
   }
-    
- /* else if (player == 2)
-    player--;*/
-    
-
 }
 
 
@@ -108,10 +103,6 @@ void IA_turn(){
   }
    //player--;
   }
-  
-
-  
-    
 }
 
 
