@@ -1,10 +1,8 @@
-//BASE :p
 int plateau[][]= new int[3][3]; //plateau
 int player=1; //numero du joueur
 int winner=0; //nom du gagnant
 boolean partie=true; //
 boolean full_plate=false;
-
 
 void setup() {
   size(300, 300);
@@ -12,8 +10,7 @@ void setup() {
 }
 
 void draw() {
- 
-  background(255,255,255);  
+   background(255,255,255);  
   
   if(partie==true){
    line(100, 0, 100, 300);
@@ -37,20 +34,16 @@ void draw() {
   fill(0,0,0);
   textSize(32);
   text("GAME OVER", 0, 50); 
-  
   }
 }
 
-void mouseClicked() {
-  
+void mouseClicked() {  
   int x_clic=mouseX/100;
   int y_clic=mouseY/100;
 
-    
   if(player == 1){
     if( plateau[x_clic][y_clic] == 0 ){
     plateau[x_clic][y_clic]=1;
-    //player++;
     IA_turn(); 
     check_plate_state();
     }
@@ -94,14 +87,12 @@ void IA_turn(){
   while(success == false){
   int x = int (random(0, 3));
   int y = int (random(0, 3));
-  print(x+" "+y+" ");
   
   if(plateau[x][y] == 0){
     success=true;
     plateau[x][y]=2;
       check_plate_state();
   }
-   //player--;
   }
 }
 
