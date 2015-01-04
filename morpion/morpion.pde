@@ -94,19 +94,45 @@ void check_plate_state (){
 }
 
 
-void IA_turn(){
+void IA_turn() {
   if(partie){
   boolean success=false;
-  
-    while(success == false){
-      int x=int (random(0, 3));
-      int y=int (random(0, 3));
+
+  while (success == false) {
+    int allignes=0; 
+    for (int x=0; x<3; x++) {
+      allignes=0;
       
-     if(plateau[x][y] == 0){
+      for (int y=0; y<3; y++) {
+        if (plateau[x][y]==1) {
+          allignes++;
+        } else if (plateau[x][y]==2) {
+          allignes=-10;
+        }
+      }
+
+      if (allignes==2) {
+        for (int y=0; y<3; y++) {
+          if (plateau[x][y] == 0) {
+            success=true;
+            plateau[x][y]=2;
+            check_plate_state();
+          }
+        }
+      }
+      
+    }
+
+
+    if (success==false) {
+      int x2 = int (random(0, 3));
+      int y2 = int (random(0, 3));
+      if (plateau[x2][y2] == 0) {
         success=true;
-        plateau[x][y]=2;
+        plateau[x2][y2]=2;
         check_plate_state();
       }
     }
+  }
   }
 }
