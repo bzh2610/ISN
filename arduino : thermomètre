@@ -1,0 +1,29 @@
+#include <Servo.h>
+
+Servo myServo;
+
+int const potPin = A0;
+int angle;
+
+void setup() {
+  myServo.attach(9); // attaches the servo on pin 9 to the servo object 
+  Serial.begin(9600); // open a serial connection to your computer
+}
+
+void loop() {
+  
+  
+  int sensorVal = analogRead(potPin);
+  float voltage = (sensorVal/1024.0) * 5.0;
+  float temperature = (voltage - .5) * 100;
+  
+  angle = map(temperature, 15, 25, 0, 180);
+  Serial.print(temperature);
+  Serial.print(" ");
+  Serial.print(angle);
+  Serial.print("\n");
+  
+  myServo.write(angle);
+  delay(200);
+}
+
