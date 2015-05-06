@@ -17,7 +17,7 @@ rect(x,y+20,20,20);
 }
 
 void li(int x, int y){
-fill(0,0,255);
+fill(0,30,240);
 rect(x,y,20,20);
 rect(x+20,y,20,20);
 rect(x+40,y,20,20);
@@ -72,11 +72,42 @@ void loadblocks(){
       }
       
       else{
-        if(plateau[i][y]==1)
-          fill(255,255,0);
-        else if(plateau[i][y]==2)
-          fill(0,255,255);
+        switch(plateau[i][y]){
+         case 0:
+         break;
+          
+         case 1:
+         fill(255,255,0);
+        break;
         
+        case 2:
+          fill(0,255,255);
+         break;
+         
+         case 3:
+          fill(0,255,0);     
+          break;
+   
+         case 4:
+          fill(250,190,0);     
+          break;
+          
+          case 5:
+        fill(190,0,255);    
+          break;
+          
+          case 6:
+          fill(0,30,240);
+          break;
+          
+          case 7:
+          fill(255,0,0);
+          break;
+                 
+          default:
+          fill(0,0,0); 
+          break;
+        }
       rect(i*unit, y*unit, unit, unit);        
       print("1");
       }
