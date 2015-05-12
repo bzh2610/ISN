@@ -37,25 +37,54 @@ MOUVEMENTS
 if(keyPressed){
   
     if(keyCode == LEFT ){
+             
+             
           switch(item){
             
            case 0:
-          if(moved>=(0+unit))
+          if(moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)-1][(stage/20)+1]==0)
             moved=moved-unit;
-          
+             
           break;
           
           case 1:
-          if(moved>=(0+unit))
+          if(moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0)
             moved=moved-unit;
           
           break;
           
            case 2:
-          if(moved>=(0+unit))
+          if(moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)+1]==0 && plateau[(moved/20)][(stage/20)]==0 )
             moved=moved-unit;
-          
           break;
+          
+                     case 3:
+          if(moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)-1][(stage/20)+1]==0 )
+            moved=moved-unit;
+          break;
+          
+          
+                     case 4:
+          if(moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)][(stage/20)+1]==0 )
+            moved=moved-unit;
+          break;
+          
+          
+                     case 5:
+          if(moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)][(stage/20)+2]==0)
+            moved=moved-unit;
+          break;
+          
+          
+                     case 6:
+          if(moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)][(stage/20)+1]==0)
+            moved=moved-unit;
+          break;
+          
+        
+         
+          
+          
     }
     }
     
