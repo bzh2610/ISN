@@ -8,6 +8,15 @@ rect(x+40,y,20,20);
 rect(x+20,y+20,20,20);
 }
 
+void t1(int x, int y){
+fill(190,0,255);
+rect(x,y,20,20);
+rect(x+20,y,20,20);
+rect(x+20,y-20,20,20);
+rect(x+20,y+20,20,20);
+}
+
+
 void l(int x, int y){
 fill(255,190,0);
 rect(x,y,20,20);
@@ -56,7 +65,21 @@ rect(x+40,y,20,20);
 rect(x+60,y,20,20);
 }
 
+void barre1(int x, int y){
+fill(0,230,230);
+rect(x,y,20,20);
+rect(x,y-60,20,20);
+rect(x,y-40,20,20);
+rect(x,y-20,20,20);
+}
 
+void s1(int x, int y){
+fill(0,255,0);
+rect(x,y,20,20);
+rect(x+20,y,20,20);
+rect(x,y-20,20,20);
+rect(x+20,y+20,20,20);
+}
 
 
 
@@ -103,7 +126,8 @@ void loadblocks(){
           case 7:
           fill(255,0,0);
           break;
-                 
+          
+          
           default:
           fill(0,0,0); 
           break;

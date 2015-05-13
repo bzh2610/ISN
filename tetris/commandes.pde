@@ -20,7 +20,7 @@ switch (item){
          
                   //////////TO CHANGE
          repeatloop=stage=moved=0;
-         item=int(random(0, 7));
+         item=int(random(0, 9));
            sortie=1;
        }
      }
@@ -33,7 +33,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(1*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+2][(stage/unit)+1]==0 && plateau[(moved/unit)+3][(stage/unit)+1]==0 )
+    if(stage<=(420-(1*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0 && plateau[(moved/unit)+2][(stage/unit)+1]==0 && plateau[(moved/unit)+3][(stage/unit)+1]==0 )
     stage=stage+unit;
      
      else{ //au plus bas possible
@@ -44,7 +44,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=0;
-         item=int(random(0, 7));
+         item=int(random(0, 9));
            sortie=1;
          
        }
@@ -69,7 +69,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 7));
+         item=int(random(0, 9));
            sortie=1;
        }
      }
@@ -95,7 +95,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 7));
+         item=int(random(0, 9));
          sortie=1;
        }
      }
@@ -120,7 +120,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 7));
+         item=int(random(0, 9));
          sortie=1;
        }
      }
@@ -145,7 +145,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 7));
+         item=int(random(0, 9));
          sortie=1;
        }
      }
@@ -170,13 +170,92 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 7));
+         item=int(random(0, 9));
          sortie=1;
        }
      }
  
   break;
   
+  
+  case 7:
+//bloc seul
+
+  break;
+  
+  
+   case 8:
+  t1(moved,0+stage);
+  
+  if(repeatloop%5==0){
+
+    if(stage<=(420-(2*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+2]==0)
+    stage=stage+unit;
+     
+     else{ //au plus bas possible
+         
+         plateau[(moved/unit)][(stage/unit)]=5;
+         plateau[(moved/unit)+1][(stage/unit)]=5;
+         plateau[(moved/unit)+1][(stage/unit)-1]=5;
+         plateau[(moved/unit)+1][(stage/unit)+1]=5;
+         
+         //////////TO CHANGE
+         repeatloop=stage=moved=item=0;
+         item=int(random(0, 9));
+         sortie=1;
+       }
+     }
+ 
+  break;
+  
+  
+   case 9:
+  barre1(moved,0+stage);
+  
+  if(repeatloop%5==0){
+
+    if(stage<=(420-(unit)) && plateau[(moved/unit)][(stage/unit)+1]==0)
+    stage=stage+unit;
+     
+     else{ //au plus bas possible
+         
+         plateau[(moved/unit)][(stage/unit)]=2;
+         plateau[(moved/unit)][(stage/unit)-1]=2;
+         plateau[(moved/unit)][(stage/unit)-2]=2;
+         plateau[(moved/unit)][(stage/unit)-3]=2;
+
+         
+         //////////TO CHANGE
+         repeatloop=stage=moved=item=0;
+         item=int(random(0, 9));
+         sortie=1;
+       }
+     }
+ 
+  break;
+  
+     case 10:
+  s1(moved,0+stage);
+  
+  if(repeatloop%5==0){
+
+    if(stage<=(420-(2*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+2]==0)
+    stage=stage+unit;
+     
+     else{ //au plus bas possible
+         plateau[(moved/unit)][(stage/unit)]=3;
+         plateau[(moved/unit)+1][(stage/unit)]=3;
+         plateau[(moved/unit)+1][(stage/unit)+1]=3;
+         plateau[(moved/unit)][(stage/unit)-1]=3;
+         
+         //////////TO CHANGE
+         repeatloop=stage=moved=item=0;
+         item=int(random(0, 9));
+           sortie=1;
+       }
+     }
+  
+  break;
 }
 
   if(wait==true){
