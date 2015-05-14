@@ -1,8 +1,8 @@
 boolean dropping=false;
-int item=8; //->random !
+int item=3; //->random !
 int stage, moved =0;
 int repeatloop=0;
-int plateau[][]=new int[11][22];
+int plateau[][]=new int[13][23];
 int unit=20;
 
 
@@ -59,7 +59,7 @@ if(keyPressed){
             moved=moved-unit;
           break;
           
-                     case 3:
+          case 3:
           if(moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)-1][(stage/20)+1]==0 )
             moved=moved-unit;
           break;
@@ -81,8 +81,19 @@ if(keyPressed){
           if(moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)][(stage/20)+1]==0)
             moved=moved-unit;
           break;
+          
+                    case 7:
+          if(moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)][(stage/20)-1]==0 && plateau[(moved/20)][(stage/20)-2]==0)
+            moved=moved-unit;
+          break;
   
   
+                         case 8:
+          if(moved>=(unit) && plateau[(moved/20)][(stage/20)-1]==0 && plateau[(moved/20)][(stage/20)+1]==0  && plateau[(moved/20)-1][(stage/20)]==0)
+            moved=moved-unit;
+          break;      
+          
+          
                        case 9:
           if(moved>=(unit) && plateau[(moved/20)][(stage/20)-1]==0 && plateau[(moved/20)][(stage/20)-2]==0  && plateau[(moved/20)][(stage/20)-3]==0  && plateau[(moved/20)][(stage/20)]==0 )
             moved=moved-unit;
@@ -92,6 +103,7 @@ if(keyPressed){
           if(moved>=(unit) && plateau[(moved/20)-1][(stage/20)-1]==0 && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)][(stage/20)+1]==0 )
             moved=moved-unit;
           break;  
+         
         
          
           
@@ -114,17 +126,17 @@ if(keyPressed){
         break;
         
           case 2:
-          if(moved<=(220-(4*unit))) 
+          if(moved<=(220-(4*unit)) && plateau[(moved/unit)+2][(stage/unit)+1]==0 && plateau[(moved/unit)+3][(stage/unit)]==0) 
         moved=moved+unit;
           break;
           
           case 3:
-          if(moved<=(220-(4*unit))) 
+          if(moved<=(220-(4*unit)) && plateau[(moved/unit)+3][(stage/unit)]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0) 
         moved=moved+unit;
           break;
  
            case 4:
-          if(moved<=(220-(4*unit))) 
+          if(moved<=(220-(4*unit)) && plateau[(moved/unit)+3][(stage/unit)]==0 && plateau[(moved/unit)+2][(stage/unit)+1]==0) 
         moved=moved+unit;
           break;
      
@@ -139,14 +151,24 @@ if(keyPressed){
         moved=moved+unit;
           break;
           
+             
+         case 7:
+          if(moved<=(220-(3*unit))) 
+        moved=moved+unit;
+          break;
           
+         case 8:
+          if(moved<=(220-(3*unit))) 
+        moved=moved+unit;
+        break;
+        
            case 9:
           if(moved<=(220-(unit))) 
         moved=moved+unit;
         break;
         
         case 10:
-          if(moved<=(220-(2*unit))) 
+          if(moved<=(220-(unit))) 
         moved=moved+unit;
         break;  
    
@@ -176,16 +198,17 @@ if(keyPressed){
       
       case 2:
       s1(moved,0+stage);
-            item=10;
+      item=10;
       break;
       
       case 3:
-      l(moved,0+stage);
+      l1(moved,0+stage);
+      item=7;
       break;
       
       case 4:
       t1(moved,0+stage);
-            item=8;
+      item=8;
       break;
       
       case 5:
@@ -194,6 +217,26 @@ if(keyPressed){
       
       case 6:
       z(moved,0+stage);
+      break;
+      
+      /*
+
+      */
+       
+      
+      case 8:
+      t1(moved,0+stage);
+      item=4;
+      break;
+         
+      case 9:
+      barre(moved,0+stage);
+      item=1;
+      break;      
+            
+      case 10:
+      s(moved,0+stage);
+      item=2;
       break;
       
       
@@ -222,7 +265,7 @@ if(keyPressed){
       break;
       
       case 4:
-      t1(moved,0+stage);
+      t(moved,0+stage);
       break;
       
       case 5:
@@ -233,11 +276,20 @@ if(keyPressed){
       z(moved,0+stage);
       break;
       
-            case 9:
+      case 7:
+      l1(moved,0+stage);
+      break;
+      
+      
+      case 8:
+      t1(moved,0+stage);
+      break;
+      
+      case 9:
       barre1(moved,0+stage);
       break;
       
-                  case 10:
+      case 10:
       s1(moved,0+stage);
       break;
     }

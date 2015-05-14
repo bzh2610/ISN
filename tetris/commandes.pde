@@ -179,8 +179,29 @@ switch (item){
   
   
   case 7:
-//bloc seul
+  
+  l1(moved,0+stage);
+  
+  if(repeatloop%5==0){
 
+    if(stage<=(420-(unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0)
+    stage=stage+unit;
+     
+     else{ //au plus bas possible
+         
+         plateau[(moved/unit)][(stage/unit)]=4;
+         plateau[(moved/unit)+1][(stage/unit)]=4;
+         plateau[(moved/unit)+1][(stage/unit)-1]=4;
+         plateau[(moved/unit)+1][(stage/unit)-2]=4;
+         
+         //////////TO CHANGE
+         repeatloop=stage=moved=item=0;
+         item=int(random(0, 9));
+         sortie=1;
+       }
+     }
+ 
+  
   break;
   
   
@@ -285,9 +306,20 @@ void verifier(){
      }
      
      if(plein==true){
-     for(int i=0; i<11; i++){
-        plateau[i][j]=0;
-     }
+       for(int i=0; i<11; i++){
+          plateau[i][j]=0;
+       }
+       
+       /*Gravité
+       Déplacement vers le bas des blocs
+       lorsqu'une rangée est complétée
+       */
+       
+       for(int y=j-1; y>=0; y--){
+                for(int i=0; i<11; i++){
+                 plateau[i][y+1]=plateau[i][y];
+                }
+       }
   }
 }
 }
