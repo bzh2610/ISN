@@ -5,7 +5,7 @@ int descente_blocs(boolean wait){
   
 switch (item){
   case 0:
-  carre(moved,0+stage);
+  carre(moved,stage);
   
   if(repeatloop%5==0){
 
@@ -29,7 +29,7 @@ switch (item){
   
   
   case 1:
-  barre(moved,0+stage);
+  barre(moved,stage);
   
   if(repeatloop%5==0){
 
@@ -54,7 +54,7 @@ switch (item){
   
   
     case 2:
-  s(moved,0+stage);
+  s(moved,stage);
   
   if(repeatloop%5==0){
 
@@ -79,7 +79,7 @@ switch (item){
   
     
     case 3:
-  l(moved,0+stage);
+  l(moved,stage);
   
   if(repeatloop%5==0){
 
@@ -104,7 +104,7 @@ switch (item){
   
   
    case 4:
-  t(moved,0+stage);
+  t(moved,stage);
   
   if(repeatloop%5==0){
 
@@ -129,7 +129,7 @@ switch (item){
   
   
      case 5:
-  li(moved,0+stage);
+  li(moved,stage);
   
   if(repeatloop%5==0){
 
@@ -154,7 +154,7 @@ switch (item){
   
   
        case 6:
-  z(moved,0+stage);
+  z(moved,stage);
   
   if(repeatloop%5==0){
 
@@ -180,7 +180,7 @@ switch (item){
   
   case 7:
   
-  l1(moved,0+stage);
+  li1(moved,stage);
   
   if(repeatloop%5==0){
 
@@ -189,10 +189,10 @@ switch (item){
      
      else{ //au plus bas possible
          
-         plateau[(moved/unit)][(stage/unit)]=4;
-         plateau[(moved/unit)+1][(stage/unit)]=4;
-         plateau[(moved/unit)+1][(stage/unit)-1]=4;
-         plateau[(moved/unit)+1][(stage/unit)-2]=4;
+         plateau[(moved/unit)][(stage/unit)]=6;
+         plateau[(moved/unit)+1][(stage/unit)]=6;
+         plateau[(moved/unit)+1][(stage/unit)-1]=6;
+         plateau[(moved/unit)+1][(stage/unit)-2]=6;
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
@@ -206,7 +206,7 @@ switch (item){
   
   
    case 8:
-  t1(moved,0+stage);
+  t1(moved,stage);
   
   if(repeatloop%5==0){
 
@@ -231,7 +231,7 @@ switch (item){
   
   
    case 9:
-  barre1(moved,0+stage);
+  barre1(moved,stage);
   
   if(repeatloop%5==0){
 
@@ -256,7 +256,7 @@ switch (item){
   break;
   
      case 10:
-  s1(moved,0+stage);
+  s1(moved,stage);
   
   if(repeatloop%5==0){
 
@@ -268,6 +268,53 @@ switch (item){
          plateau[(moved/unit)+1][(stage/unit)]=3;
          plateau[(moved/unit)+1][(stage/unit)+1]=3;
          plateau[(moved/unit)][(stage/unit)-1]=3;
+         
+         //////////TO CHANGE
+         repeatloop=stage=moved=item=0;
+         item=int(random(0, 9));
+           sortie=1;
+       }
+     }
+  
+  break;
+  
+  
+       case 11:
+  l1(moved,stage);
+  
+  if(repeatloop%5==0){
+
+    if(stage<=(420-(3*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+3]==0)
+    stage=stage+unit;
+     
+     else{ //au plus bas possible
+         plateau[(moved/unit)][(stage/unit)]=4;
+         plateau[(moved/unit)+1][(stage/unit)]=4;
+         plateau[(moved/unit)+1][(stage/unit)+1]=4;
+         plateau[(moved/unit)+1][(stage/unit)+2]=4;
+         
+         //////////TO CHANGE
+         repeatloop=stage=moved=item=0;
+         item=int(random(0, 9));
+           sortie=1;
+       }
+     }
+  
+  break;
+  
+         case 12:
+  z1(moved,stage);
+  
+  if(repeatloop%5==0){
+
+    if(stage<=(420-(3*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+3]==0)
+    stage=stage+unit;
+     
+     else{ //au plus bas possible
+         plateau[(moved/unit)][(stage/unit)]=7;
+         plateau[(moved/unit)+1][(stage/unit)]=7;
+         plateau[(moved/unit)+1][(stage/unit)-1]=7;
+         plateau[(moved/unit)][(stage/unit)+1]=7;
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
