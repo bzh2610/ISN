@@ -1,4 +1,4 @@
-boolean dropping=false;
+ boolean dropping=false;
 boolean game_over=false;
 boolean menu_enabled=true;
 int item=3; //->random !
@@ -23,7 +23,7 @@ void draw() {
   if (menu_enabled)
     menu();
 
-  else {
+  else { //vérfie que la ligne la plus haute est libre (pour ajouter un bloc).
     for (int i=0; i<12; i++) {
       if (plateau[i][0] != 0) {
         game_over=true;
@@ -31,22 +31,22 @@ void draw() {
     }
 
 
-    if (!game_over) {
-      if (dropping==false)
+    if (!game_over) { //Si la partie continue
+      if (dropping==false) //delai de 0.5S avant le debut de la descente des blocs
         dropping=true;
 
 
-      else {
+       else {
         background(190, 190, 190);
         loadblocks();
         descente_blocs(true);
-      }
+       }
 
 
 
-      /*******
-       MOUVEMENTS
-       *******/
+      /*****************************
+      *****Gestion des mouvements***
+      *****************************/
 
 
       if (keyPressed) {
@@ -127,8 +127,17 @@ void draw() {
             if (moved>=(unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)][(stage/20)-1]==0 && plateau[(moved/20)-1][(stage/20)+1]==0 )
               moved=moved-unit;
             break;
+            
+            
+           case 13:
+            if (moved>=(3*unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)-3][(stage/20)+1]==0 )
+              moved=moved-unit;
+            break;
           }
-        } else if (keyCode == RIGHT) {
+        } 
+        
+        
+        else if (keyCode == RIGHT) {
           switch(item) {
 
           case 0:
@@ -198,8 +207,17 @@ void draw() {
             if (moved<=(220-(3*unit))) 
               moved=moved+unit;
             break;
+            
+            
+          case 13:
+            if (moved<=(220-(2*unit))) 
+              moved=moved+unit;
+            break;
           }
-        } else if (keyCode == DOWN ) {
+        } 
+        
+        
+        else if (keyCode == DOWN ) {
           int sortie=90; 
 
           do {
@@ -209,7 +227,10 @@ void draw() {
             loadblocks();
           }
           while (sortie == 0);
-        } else if (keyCode == UP) {
+        }
+       
+       
+        else if (keyCode == UP) {
 
           switch (item) {
 
@@ -268,15 +289,26 @@ void draw() {
             break;
 
           case 11:
-            l(moved, stage);
-            item=3;
+            l2(moved, stage);
+            item=13;
             break;
 
+          /*
+
+             */
 
           case 12:
             z(moved, stage);
             item=6;
             break;
+            
+            
+            
+           case 13:
+            l(moved, stage);
+            item=3;
+            break;
+
           }
         }
 
@@ -312,10 +344,12 @@ void draw() {
           z(moved, stage);
           break;
 
+
+
+
         case 7:
           li1(moved, stage);
           break;
-
 
         case 8:
           t1(moved, stage);
@@ -333,10 +367,17 @@ void draw() {
           l1(moved, stage);
           break;
 
-
         case 12:
           z1(moved, stage);
           break;
+          
+          
+          
+          
+         case 13:
+          l2(moved, stage);
+          break;
+          
         }
       }
 

@@ -1,7 +1,9 @@
 color left_c = color(200, 200, 200);
 color right_c = color(200, 200, 200);
 
-
+/*La fonction menu() est appelée au démarrage du jeu:
+c'est grâce à elle que la partie pourra commencer.
+*/
 void menu(){
 
     noStroke();
@@ -22,12 +24,16 @@ void menu(){
 }
 
 
+
+/*
+Les fonctions qui suivent sont utilisées pour gérer les déplacements dans le menu
+*/
 void mouseMoved() {
 
-  if (mouseX < width/2) {
+  if (mouseX < width/2) { //Souris positionnée au dessus du bouton "Jouer" 
     left_c= color(112, 162, 237);
     right_c= color(200, 200, 200);
-  } else {
+  } else { //Souris positionnée au dessus du bouton "Quitter" 
     left_c= color(200, 200, 200);
     right_c= color(241, 160, 100);
   }
@@ -38,13 +44,13 @@ void mouseMoved() {
 void mouseClicked() {
 
     if(menu_enabled){
-       if(mouseX<width/2){
+       if(mouseX<width/2){ //Clic sur "Jouer"
        menu_enabled=false;
        game_over=false;
        stroke(0,0,0);
        }     
       
-      else{
+      else{ //Clic sur "Quitter"
        frame.setVisible(false);
       }
     

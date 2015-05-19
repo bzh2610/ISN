@@ -36,6 +36,15 @@ rect(x+20,y+40,20,20);
 }
 
 
+void l2(int x, int y){
+fill(255,190,0);
+rect(x,y,20,20);
+rect(x,y+20,20,20);
+rect(x-20,y+20,20,20);
+rect(x-40,y+20,20,20);
+}
+
+
 
 /////////////////////
 
@@ -121,15 +130,16 @@ rect(x,y-20,20,20);
 
 
 
-/*-------------------------------------------------------------------------------------------------------
-  ----------------------------------------------FONCTIONS----------------------------------------------
---------------------------------------------------------------------------------------------------------*/
+/*La fonction loadblocks(); va interprêter le contenu de plateau[x][y]
+Selon les valeurs contenues dans le tableau, elle fera apparaître des 
+carrés (blocs) de différentes couleurs.
+*/
 
 void loadblocks(){
  for(int y=0; y<22; y++){
-        for(int i=0; i<11; i++){
+        for(int i=0; i<11; i++){ //dessine
       if(plateau[i][y]==0){
-      print("0");
+
       }
       
       else{
@@ -171,9 +181,10 @@ void loadblocks(){
           break;
         }
       rect(i*unit, y*unit, unit, unit);        
-      print("1");
       }
+          print(plateau[i][y]);
     }
+
     print("\n");
   }
   

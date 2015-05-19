@@ -1,6 +1,6 @@
 int descente_blocs(boolean wait){
 
-  int sortie=0;
+  int sortie=0; //La variable "sortie" vaut 0 quand le bloc descend et 1 quand le bloc en touche un autre
 
   
 switch (item){
@@ -307,7 +307,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(3*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+3]==0)
+    if(stage<=(420-(2*unit)) && plateau[(moved/unit)][(stage/unit)+2]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0)
     stage=stage+unit;
      
      else{ //au plus bas possible
@@ -324,9 +324,35 @@ switch (item){
      }
   
   break;
+  
+  
+  
+    case 13:
+  l2(moved,stage);
+  
+  if(repeatloop%5==0){
+
+    if(stage<=(420-(2*unit)) && plateau[(moved/unit)][(stage/unit)+2]==0 && plateau[(moved/unit)-1][(stage/unit)+2]==0  && plateau[(moved/unit)-2][(stage/unit)+2]==0)
+    stage=stage+unit;
+     
+     else{ //au plus bas possible
+         plateau[(moved/unit)][(stage/unit)]=4;
+         plateau[(moved/unit)][(stage/unit)+1]=4;
+         plateau[(moved/unit)-1][(stage/unit)+1]=4;
+         plateau[(moved/unit)-2][(stage/unit)+1]=4;
+         
+         //////////TO CHANGE
+         repeatloop=stage=moved=item=0;
+         item=int(random(0, 9));
+           sortie=1;
+       }
+     }
+  
+  break;
 }
 
-  if(wait==true){
+  if(wait==true){ /*Wait == true : descente normale
+                    Wait == false: descente accélérée (key==DOWN)*/        
     delay(100);
   }
   
@@ -339,7 +365,10 @@ return sortie;
 
 
 
-
+/*La fonction "verifier" va vérifier si une ligne est pleine. 
+Si c'est le cas, elle effacera les blocs contenus dans cette dernière
+et décalera les rangées supérieures d'un cran vers le bas (gravité).
+*/
 
 void verifier(){
   
