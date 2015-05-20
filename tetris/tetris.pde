@@ -5,12 +5,22 @@ int item=3; //->random !
 int stage, moved =0;
 int repeatloop=0;
 int plateau[][]=new int[13][23];
+
+
 int unit=20;
- 
+int x_window=220;
+int y_window=440;
+
+
+float coef_agrandissement=2;
 
 
 void setup() {
-  size(220, 440);
+  x_window=int(x_window*coef_agrandissement);
+  y_window=int(y_window*coef_agrandissement);  
+  unit=int(unit*coef_agrandissement);
+  
+  size(x_window, y_window);
   smooth();
   // item=int(random(0, 9));
 }
@@ -57,80 +67,80 @@ void draw() {
           switch(item) {
 
           case 0:
-            if (moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)-1][(stage/20)+1]==0)
+            if (moved>=(0+unit) && plateau[(moved/unit)-1][(stage/20)]==0 && plateau[(moved/unit)-1][(stage/20)+1]==0)
               moved=moved-unit;
 
             break;
 
           case 1:
-            if (moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0)
+            if (moved>=(0+unit) && plateau[(moved/unit)-1][(stage/20)]==0)
               moved=moved-unit;
 
             break;
 
           case 2:
-            if (moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)+1]==0 && plateau[(moved/20)][(stage/20)]==0 )
+            if (moved>=(0+unit) && plateau[(moved/unit)-1][(stage/20)+1]==0 && plateau[(moved/unit)][(stage/20)]==0 )
               moved=moved-unit;
             break;
 
           case 3:
-            if (moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)-1][(stage/20)+1]==0 )
+            if (moved>=(0+unit) && plateau[(moved/unit)-1][(stage/20)]==0 && plateau[(moved/unit)-1][(stage/20)+1]==0 )
               moved=moved-unit;
             break;
 
 
           case 4:
-            if (moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)][(stage/20)+1]==0 )
+            if (moved>=(0+unit) && plateau[(moved/unit)-1][(stage/20)]==0 && plateau[(moved/unit)][(stage/20)+1]==0 )
               moved=moved-unit;
             break;
 
 
           case 5:
-            if (moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)][(stage/20)+2]==0)
+            if (moved>=(0+unit) && plateau[(moved/unit)-1][(stage/20)]==0 && plateau[(moved/unit)][(stage/20)+2]==0)
               moved=moved-unit;
             break;
 
 
           case 6:
-            if (moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)][(stage/20)+1]==0)
+            if (moved>=(0+unit) && plateau[(moved/unit)-1][(stage/20)]==0 && plateau[(moved/unit)][(stage/20)+1]==0)
               moved=moved-unit;
             break;
 
           case 7:
-            if (moved>=(0+unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)][(stage/20)-1]==0 && plateau[(moved/20)][(stage/20)-2]==0)
+            if (moved>=(0+unit) && plateau[(moved/unit)-1][(stage/20)]==0 && plateau[(moved/unit)][(stage/20)-1]==0 && plateau[(moved/unit)][(stage/20)-2]==0)
               moved=moved-unit;
             break;
 
 
           case 8:
-            if (moved>=(unit) && plateau[(moved/20)][(stage/20)-1]==0 && plateau[(moved/20)][(stage/20)+1]==0  && plateau[(moved/20)-1][(stage/20)]==0)
+            if (moved>=(unit) && plateau[(moved/unit)][(stage/20)-1]==0 && plateau[(moved/unit)][(stage/20)+1]==0  && plateau[(moved/unit)-1][(stage/20)]==0)
               moved=moved-unit;
             break;      
 
 
           case 9:
-            if (moved>=(unit) && plateau[(moved/20)][(stage/20)-1]==0 && plateau[(moved/20)][(stage/20)-2]==0  && plateau[(moved/20)][(stage/20)-3]==0  && plateau[(moved/20)][(stage/20)]==0 )
+            if (moved>=(unit) && plateau[(moved/unit)][(stage/20)-1]==0 && plateau[(moved/unit)][(stage/20)-2]==0  && plateau[(moved/unit)][(stage/20)-3]==0  && plateau[(moved/unit)][(stage/20)]==0 )
               moved=moved-unit;
             break;        
 
           case 10:
-            if (moved>=(unit) && plateau[(moved/20)-1][(stage/20)-1]==0 && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)][(stage/20)+1]==0 )
+            if (moved>=(unit) && plateau[(moved/unit)-1][(stage/20)-1]==0 && plateau[(moved/unit)-1][(stage/20)]==0 && plateau[(moved/unit)][(stage/20)+1]==0 )
               moved=moved-unit;
             break;  
 
           case 11:
-            if (moved>=(unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)][(stage/20)+1]==0 && plateau[(moved/20)][(stage/20)+2]==0 )
+            if (moved>=(unit) && plateau[(moved/unit)-1][(stage/20)]==0 && plateau[(moved/unit)][(stage/20)+1]==0 && plateau[(moved/unit)][(stage/20)+2]==0 )
               moved=moved-unit;
             break;    
 
           case 12:
-            if (moved>=(unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)][(stage/20)-1]==0 && plateau[(moved/20)-1][(stage/20)+1]==0 )
+            if (moved>=(unit) && plateau[(moved/unit)-1][(stage/20)]==0 && plateau[(moved/unit)][(stage/20)-1]==0 && plateau[(moved/unit)-1][(stage/20)+1]==0 )
               moved=moved-unit;
             break;
             
             
            case 13:
-            if (moved>=(3*unit) && plateau[(moved/20)-1][(stage/20)]==0 && plateau[(moved/20)-3][(stage/20)+1]==0 )
+            if (moved>=(3*unit) && plateau[(moved/unit)-1][(stage/20)]==0 && plateau[(moved/unit)-3][(stage/20)+1]==0 )
               moved=moved-unit;
             break;
           }
@@ -141,76 +151,76 @@ void draw() {
           switch(item) {
 
           case 0:
-            if (moved<=(220-(unit+40)) && plateau[(moved/unit)+1][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)]==0) 
+            if (moved<=(x_window-(unit+40)) && plateau[(moved/unit)+1][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)]==0) 
               moved=moved+unit;
 
             break;
 
           case 1:
-            if (moved<=(220-(5*unit))) 
+            if (moved<=(x_window-(5*unit))) 
               moved=moved+unit;
             break;
 
           case 2:
-            if (moved<=(220-(4*unit)) && plateau[(moved/unit)+2][(stage/unit)+1]==0 && plateau[(moved/unit)+3][(stage/unit)]==0) 
+            if (moved<=(x_window-(4*unit)) && plateau[(moved/unit)+2][(stage/unit)+1]==0 && plateau[(moved/unit)+3][(stage/unit)]==0) 
               moved=moved+unit;
             break;
 
           case 3:
-            if (moved<=(220-(4*unit)) && plateau[(moved/unit)+3][(stage/unit)]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0) 
+            if (moved<=(x_window-(4*unit)) && plateau[(moved/unit)+3][(stage/unit)]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0) 
               moved=moved+unit;
             break;
 
           case 4:
-            if (moved<=(220-(4*unit)) && plateau[(moved/unit)+3][(stage/unit)]==0 && plateau[(moved/unit)+2][(stage/unit)+1]==0) 
+            if (moved<=(x_window-(4*unit)) && plateau[(moved/unit)+3][(stage/unit)]==0 && plateau[(moved/unit)+2][(stage/unit)+1]==0) 
               moved=moved+unit;
             break;
 
           case 5:
-            if (moved<=(220-(4*unit))) 
+            if (moved<=(x_window-(4*unit))) 
               moved=moved+unit;
             break;
 
 
           case 6:
-            if (moved<=(220-(4*unit))) 
+            if (moved<=(x_window-(4*unit))) 
               moved=moved+unit;
             break;
 
 
           case 7:
-            if (moved<=(220-(3*unit))) 
+            if (moved<=(x_window-(3*unit))) 
               moved=moved+unit;
             break;
 
           case 8:
-            if (moved<=(220-(3*unit))) 
+            if (moved<=(x_window-(3*unit))) 
               moved=moved+unit;
             break;
 
           case 9:
-            if (moved<=(220-(2*unit))) 
+            if (moved<=(x_window-(2*unit))) 
               moved=moved+unit;
             break;
 
           case 10:
-            if (moved<=(220-(unit))) 
+            if (moved<=(x_window-(unit))) 
               moved=moved+unit;
             break;  
 
           case 11:
-            if (moved<=(220-(3*unit))) 
+            if (moved<=(x_window-(3*unit))) 
               moved=moved+unit;
             break;  
 
           case 12:
-            if (moved<=(220-(3*unit))) 
+            if (moved<=(x_window-(3*unit))) 
               moved=moved+unit;
             break;
             
             
           case 13:
-            if (moved<=(220-(2*unit))) 
+            if (moved<=(x_window-(2*unit))) 
               moved=moved+unit;
             break;
           }

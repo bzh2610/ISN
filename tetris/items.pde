@@ -2,46 +2,46 @@
 
 void t(int x, int y){
 fill(190,0,255);
-rect(x,y,20,20);
-rect(x+20,y,20,20);
-rect(x+40,y,20,20);
-rect(x+20,y+20,20,20);
+rect(x,y,unit,unit);
+rect(x+unit,y,unit,unit);
+rect(x+(2*unit),y,unit,unit);
+rect(x+unit,y+unit,unit,unit);
 }
 
 void t1(int x, int y){
 fill(190,0,255);
-rect(x,y,20,20);
-rect(x+20,y,20,20);
-rect(x+20,y-20,20,20);
-rect(x+20,y+20,20,20);
+rect(x,y,unit,unit);
+rect(x+unit,y,unit,unit);
+rect(x+unit,y-unit,unit,unit);
+rect(x+unit,y+unit,unit,unit);
 }
 
 //////////////////////
 
 void l(int x, int y){
 fill(255,190,0);
-rect(x,y,20,20);
-rect(x+20,y,20,20);
-rect(x+40,y,20,20);
-rect(x,y+20,20,20);
+rect(x,y,unit,unit);
+rect(x+unit,y,unit,unit);
+rect(x+(2*unit),y,unit,unit);
+rect(x,y+unit,unit,unit);
 }
 
 
 void l1(int x, int y){
 fill(255,190,0);
-rect(x,y,20,20);
-rect(x+20,y,20,20);
-rect(x+20,y+20,20,20);
-rect(x+20,y+40,20,20);
+rect(x,y,unit,unit);
+rect(x+unit,y,unit,unit);
+rect(x+unit,y+unit,unit,unit);
+rect(x+unit,y+(2*unit),unit,unit);
 }
 
 
 void l2(int x, int y){
 fill(255,190,0);
-rect(x,y,20,20);
-rect(x,y+20,20,20);
-rect(x-20,y+20,20,20);
-rect(x-40,y+20,20,20);
+rect(x,y,unit,unit);
+rect(x,y+unit,unit,unit);
+rect(x-unit,y+unit,unit,unit);
+rect(x-(2*unit),y+unit,unit,unit);
 }
 
 
@@ -50,36 +50,36 @@ rect(x-40,y+20,20,20);
 
 void li(int x, int y){
 fill(0,30,240);
-rect(x,y,20,20);
-rect(x+20,y,20,20);
-rect(x+40,y,20,20);
-rect(x+40,y+20,20,20);
+rect(x,y,unit,unit);
+rect(x+unit,y,unit,unit);
+rect(x+(2*unit),y,unit,unit);
+rect(x+(2*unit),y+unit,unit,unit);
 }
 
 void li1(int x, int y){
 fill(0,30,240);
-rect(x,y,20,20);
-rect(x+20,y,20,20);
-rect(x+20,y-20,20,20);
-rect(x+20,y-40,20,20);
+rect(x,y,unit,unit);
+rect(x+unit,y,unit,unit);
+rect(x+unit,y-unit,unit,unit);
+rect(x+unit,y-(2*unit),unit,unit);
 }
 
 //////////////////////
 
 void z(int x, int y){
 fill(255,0,0);
-rect(x,y,20,20);
-rect(x+20,y,20,20);
-rect(x+20,y+20,20,20);
-rect(x+40,y+20,20,20);
+rect(x,y,unit,unit);
+rect(x+unit,y,unit,unit);
+rect(x+unit,y+unit,unit,unit);
+rect(x+(2*unit),y+unit,unit,unit);
 }
 
 void z1(int x, int y){
 fill(255,0,0);
-rect(x,y,20,20);
-rect(x+20,y,20,20);
-rect(x+20,y-20,20,20);
-rect(x,y+20,20,20);
+rect(x,y,unit,unit);
+rect(x+unit,y,unit,unit);
+rect(x+unit,y-unit,unit,unit);
+rect(x,y+unit,unit,unit);
 }
 
 
@@ -87,45 +87,44 @@ rect(x,y+20,20,20);
 //////////////////////
 void s(int x, int y){
 fill(0,255,0);
-rect(x+20,y,20,20);
-rect(x+40,y,20,20);
-rect(x,y+20,20,20);
-rect(x+20,y+20,20,20);
+rect(x+unit,y,unit,unit);
+rect(x+(2*unit),y,unit,unit);
+rect(x,y+unit,unit,unit);
+rect(x+unit,y+unit,unit,unit);
 }
 
 void s1(int x, int y){
 fill(0,255,0);
-rect(x,y,20,20);
-rect(x+20,y,20,20);
-rect(x,y-20,20,20);
-rect(x+20,y+20,20,20);
+rect(x,y,unit,unit);
+rect(x+unit,y,unit,unit);
+rect(x,y-unit,unit,unit);
+rect(x+unit,y+unit,unit,unit);
 }
 
 ///////////////////////
 void carre(int x, int y){
 fill(255,255,0);
-rect(x,y,20,20);
-rect(x+20,y,20,20);
-rect(x,y+20,20,20);
-rect(x+20,y+20,20,20);
+rect(x,y,unit,unit);
+rect(x+unit,y,unit,unit);
+rect(x,y+unit,unit,unit);
+rect(x+unit,y+unit,unit,unit);
 }
 
 void barre(int x, int y){
 fill(0,230,230);
-rect(x,y,20,20);
-rect(x+20,y,20,20);
-rect(x+40,y,20,20);
-rect(x+60,y,20,20);
+rect(x,y,unit,unit);
+rect(x+unit,y,unit,unit);
+rect(x+(2*unit),y,unit,unit);
+rect(x+(3*unit),y,unit,unit);
 }
 
 void barre1(int x, int y){
 fill(0,230,230);
-rect(x,y,20,20);
-rect(x,y-60,20,20);
-rect(x,y-40,20,20);
-rect(x,y-20,20,20);
+rect(x,y,unit,unit);
+rect(x,y-(3*unit),unit,unit);
+rect(x,y-(2*unit),unit,unit);
+rect(x,y-unit,unit,unit);
 }
-
 
 
 
@@ -191,4 +190,7 @@ void loadblocks(){
   print("\n\n\n\n");
   
 }
+
+
+
 

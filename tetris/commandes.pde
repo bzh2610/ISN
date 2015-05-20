@@ -9,7 +9,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(2*unit)) && plateau[(moved/unit)][(stage/unit)+2]==0 && plateau[(moved/unit)+1][(stage/unit)+2]==0)
+    if(stage<=((y_window-unit)-(2*unit)) && plateau[(moved/unit)][(stage/unit)+2]==0 && plateau[(moved/unit)+1][(stage/unit)+2]==0)
     stage=stage+unit;
      
      else{ //au plus bas possible
@@ -33,7 +33,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(1*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0 && plateau[(moved/unit)+2][(stage/unit)+1]==0 && plateau[(moved/unit)+3][(stage/unit)+1]==0 )
+    if(stage<=((y_window-unit)-(1*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0 && plateau[(moved/unit)+2][(stage/unit)+1]==0 && plateau[(moved/unit)+3][(stage/unit)+1]==0 )
     stage=stage+unit;
      
      else{ //au plus bas possible
@@ -58,7 +58,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(2*unit)) && plateau[(moved/unit)][(stage/unit)+2]==0 && plateau[(moved/unit)+1][(stage/unit)+2]==0 && plateau[(moved/unit)+2][(stage/unit)+1]==0)
+    if(stage<=((y_window-unit)-(2*unit)) && plateau[(moved/unit)][(stage/unit)+2]==0 && plateau[(moved/unit)+1][(stage/unit)+2]==0 && plateau[(moved/unit)+2][(stage/unit)+1]==0)
     stage=stage+unit;
      
      else{ //au plus bas possible
@@ -83,7 +83,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(2*unit)) && plateau[(moved/unit)][(stage/unit)+2]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0 && plateau[(moved/unit)+2][(stage/unit)+1]==0)
+    if(stage<=((y_window-unit)-(2*unit)) && plateau[(moved/unit)][(stage/unit)+2]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0 && plateau[(moved/unit)+2][(stage/unit)+1]==0)
     stage=stage+unit;
      
      else{ //au plus bas possible
@@ -108,7 +108,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(2*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+2]==0 && plateau[(moved/unit)+2][(stage/unit)+1]==0)
+    if(stage<=((y_window-unit)-(2*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+2]==0 && plateau[(moved/unit)+2][(stage/unit)+1]==0)
     stage=stage+unit;
      
      else{ //au plus bas possible
@@ -133,7 +133,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(2*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0 && plateau[(moved/unit)+2][(stage/unit)+2]==0)
+    if(stage<=((y_window-unit)-(2*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0 && plateau[(moved/unit)+2][(stage/unit)+2]==0)
     stage=stage+unit;
      
      else{ //au plus bas possible
@@ -158,7 +158,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(2*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+2]==0 && plateau[(moved/unit)+2][(stage/unit)+2]==0)
+    if(stage<=((y_window-unit)-(2*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+2]==0 && plateau[(moved/unit)+2][(stage/unit)+2]==0)
     stage=stage+unit;
      
      else{ //au plus bas possible
@@ -184,7 +184,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0)
+    if(stage<=((y_window-unit)-(unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0)
     stage=stage+unit;
      
      else{ //au plus bas possible
@@ -210,7 +210,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(2*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+2]==0)
+    if(stage<=((y_window-unit)-(2*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+2]==0)
     stage=stage+unit;
      
      else{ //au plus bas possible
@@ -235,7 +235,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(unit)) && plateau[(moved/unit)][(stage/unit)+1]==0)
+    if(stage<=((y_window-unit)-(unit)) && plateau[(moved/unit)][(stage/unit)+1]==0)
     stage=stage+unit;
      
      else{ //au plus bas possible
@@ -260,7 +260,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(2*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+2]==0)
+    if(stage<=((y_window-unit)-(2*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+2]==0)
     stage=stage+unit;
      
      else{ //au plus bas possible
@@ -284,7 +284,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(3*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+3]==0)
+    if(stage<=((y_window-unit)-(3*unit)) && plateau[(moved/unit)][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)+3]==0)
     stage=stage+unit;
      
      else{ //au plus bas possible
@@ -307,7 +307,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(2*unit)) && plateau[(moved/unit)][(stage/unit)+2]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0)
+    if(stage<=((y_window-unit)-(2*unit)) && plateau[(moved/unit)][(stage/unit)+2]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0)
     stage=stage+unit;
      
      else{ //au plus bas possible
@@ -332,7 +332,7 @@ switch (item){
   
   if(repeatloop%5==0){
 
-    if(stage<=(420-(2*unit)) && plateau[(moved/unit)][(stage/unit)+2]==0 && plateau[(moved/unit)-1][(stage/unit)+2]==0  && plateau[(moved/unit)-2][(stage/unit)+2]==0)
+    if(stage<=((y_window-unit)-(2*unit)) && plateau[(moved/unit)][(stage/unit)+2]==0 && plateau[(moved/unit)-1][(stage/unit)+2]==0  && plateau[(moved/unit)-2][(stage/unit)+2]==0)
     stage=stage+unit;
      
      else{ //au plus bas possible
