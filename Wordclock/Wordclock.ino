@@ -32,8 +32,16 @@ void draw(){
   
   switch(heure){
     case 0:
- 
-    break;
+  for(int i=12; i<=17; i++){
+      led(i, r, v, b);
+      }    
+     
+     //efface heure
+     for(int i=60; i<=66; i++){
+      led(i, 0, 0, 0);
+    } 
+     break;
+    
      
      case 1:
      led(53,r,v,b);
@@ -193,7 +201,7 @@ void draw(){
    led(29,r,v,b);
    led(30,r,v,b);
    break;
-   
+  
   } 
   
   
