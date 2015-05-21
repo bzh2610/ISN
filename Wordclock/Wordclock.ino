@@ -207,8 +207,84 @@ void draw(){
   
   
     switch(minutes){
-    
-    }
+      
+      case 1 : //cinq
+      for (int i=95, i<=98, i++){
+        led(i,r,v,b);
+      }
+      
+      case 2: //dix
+      for (int i=75, i<=77, i++){
+        led(i,r,v,b);
+      }
+      
+      case 3: // et quart
+      led(67,r,v,b);
+      led(68,r,v,b);
+      for (int i=84, i<=88, i++){
+        led(i,r,v,b);
+      }
+      
+      case 4: //vingt
+      for (int i=89, i<=93, i++){
+        led(i,r,v,b);
+      }
+      
+      case 5: //vingt-cinq
+      for (int i=89, i<=98, i++){
+        led(i,r,v,b);
+      }
+      
+      case 6: //et demi
+      led(67,r,v,b);
+      led(68,r,v,b);
+      for (int i=80, i<=83, i++){
+        led(i,r,v,b);
+      }
+      
+      case 7: //moins vingt-cinq
+      for (int i=69, i<=73, i++){
+        led(i,r,v,b);
+      }
+      for (int i=89, i<=98, i++){
+        led(i,r,v,b);
+      }
+      
+      case 8://moins vingt
+      for (int i=69, i<=73, i++){
+        led(i,r,v,b);
+      }
+      for (int i=89, i<=93, i++){
+        led(i,r,v,b);
+      }
+      
+      case 9: //moins le quart
+      for (int i=69, i<=73, i++){
+        led(i,r,v,b);
+      }
+      led(78,r,v,b);
+      led(79,r,v,b);
+      for (int i=84, i<=88, i++){
+        led(i,r,v,b);
+      }
+      
+      case 10: //moins dix
+      for (int i=69, i<=73, i++){
+        led(i,r,v,b);
+      }
+      led(75,r,v,b);
+      led(76,r,v,b);
+      led(77,r,v,b);
+      
+      case 11: //moins cinq
+      for (int i=69, i<=73, i++){
+        led(i,r,v,b);
+      }
+      for (int i=95, i<=98, i++){
+        led(i,r,v,b);
+      }
+       
+      }
   
 
 
