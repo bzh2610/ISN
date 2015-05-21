@@ -16,9 +16,9 @@ void menu(){
     fill(255, 255, 255);  
     textSize(32);
     textAlign(CENTER, CENTER);
-    text("Jouer", width/4, 268);
-    text("Quitter", width/4*3, 268);
-    text("TETRIS", width/2, 50);
+    text("Jouer", width/4, height/2);
+    text("Quitter", width/4*3, height/2);
+    text("TETRIS", width/2, height*1/10);
 
 
 }
