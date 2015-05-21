@@ -1,4 +1,3 @@
-
 //#include "Tlc5940.h"
 int minutes=55;
 int heure=23;
@@ -46,6 +45,7 @@ void draw(){
      led(57,r,v,b);
      led(58,r,v,b);
      led(59,r,v,b);
+     break;
    
    case 3:  
    led(17,r,v,b);
@@ -53,6 +53,7 @@ void draw(){
    led(19,r,v,b);
    led(20,r,v,b);
    led(21,r,v,b);
+   break;
    
    case 4 :
    led(34,r,v,b);
@@ -61,52 +62,61 @@ void draw(){
    led(37,r,v,b);
    led(38,r,v,b);
    led(39,r,v,b);
+   break;
    
    case 5:
    led(49,r,v,b);
    led(50,r,v,b);
    led(51,r,v,b);
    led(52,r,v,b);
+   break;
    
    case 6:
    led(31,r,v,b);
    led(32,r,v,b);
    led(33,r,v,b);
+   break;
    
    case 7:
    led(23,r,v,b);
    led(24,r,v,b);
    led(25,r,v,b);
    led(26,r,v,b);
+   break;
    
    case 8:
    led(45,r,v,b);
    led(46,r,v,b);
    led(47,r,v,b);
    led(48,r,v,b);
+   break;
    
    case 9:
    led(8,r,v,b);
    led(9,r,v,b);
    led(10,r,v,b);
    led(11,r,v,b);
+   break;
    
    case 10:
    led(42,r,v,b);
    led(43,r,v,b);
    led(44,r,v,b);
+   break;
    
    case 11:
    led(27,r,v,b);
    led(28,r,v,b);
    led(29,r,v,b);
    led(30,r,v,b);
+   break;
    
    case 12:
    led(40,r,v,b);
    led(41,r,v,b);
    led(42,r,v,b);
    led(43,r,v,b);
+   break;
    
        case 13:
      led(53,r,v,b);
@@ -118,13 +128,15 @@ void draw(){
      led(57,r,v,b);
      led(58,r,v,b);
      led(59,r,v,b);
-   
+     break;
+     
    case 15:  
    led(17,r,v,b);
    led(18,r,v,b);
    led(19,r,v,b);
    led(20,r,v,b);
    led(21,r,v,b);
+   break;
    
    case 16:
    led(34,r,v,b);
@@ -133,47 +145,54 @@ void draw(){
    led(37,r,v,b);
    led(38,r,v,b);
    led(39,r,v,b);
+   break;
    
    case 17:
    led(49,r,v,b);
    led(50,r,v,b);
    led(51,r,v,b);
    led(52,r,v,b);
+   break;
    
    case 18:
    led(31,r,v,b);
    led(32,r,v,b);
    led(33,r,v,b);
+   break;
    
    case 19:
    led(23,r,v,b);
    led(24,r,v,b);
    led(25,r,v,b);
    led(26,r,v,b);
+   break;
    
    case 20:
    led(45,r,v,b);
    led(46,r,v,b);
    led(47,r,v,b);
    led(48,r,v,b);
+   break;
    
    case 21:
    led(8,r,v,b);
    led(9,r,v,b);
    led(10,r,v,b);
    led(11,r,v,b);
+   break;
    
    case 22:
    led(42,r,v,b);
    led(43,r,v,b);
    led(44,r,v,b);
+   break;
    
    case 23:
    led(27,r,v,b);
    led(28,r,v,b);
    led(29,r,v,b);
    led(30,r,v,b);
-   
+   break;
    
   } 
   
