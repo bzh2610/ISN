@@ -1,9 +1,11 @@
+
 //#include "Tlc5940.h"
-int minutes=0;
-int heure=1;
+int minutes=55;
+int heure=23;
 int r=4000;
 int v=0;
 int b=0;
+int repetion=0;
 
 void led(int number, int r, int v, int b){
   
@@ -20,141 +22,196 @@ void led(int number, int r, int v, int b){
     }*/
 }
 
-void initialisation(){
-  //il est
-  for(int i=1; i<=6; i++){
-    led(i, r, v, b);
-  }
-  
-  led(3,0,0,0);
-  
-  //heures
-  
-  for(int i=60; i<=66; i++){
-    led(i, r, v, b);
-  }
-  
-}
-
   
 void setup()
 { 
-  Tlc.init(); 
+ // Tlc.init(); 
 }
 
-void loop()
-{ 
-   
-  Tlc.clear();
+void draw(){    
+// Tlc.clear();
   
-  ///////////
- //  initialisation();  
-  //////////
   switch(heure){
     case 0:
-    //minuit
-      for(int i=12; i<=17; i++){
-      led(i, r, v, b);
-      }    
-     
-     //efface heure
-     for(int i=60; i<=66; i++){
-      led(i, 0, 0, 0);
-    } 
-     break;
+ 
+    break;
      
      case 1:
      led(53,r,v,b);
      led(54,r,v,b);
      led(55,r,v,b);   
      break;
-     
+      
      case 2:
-     led(15,r,v,b);
-     led(16,r,v,b);    
-     led(17,r,v,b);
-     led(18,r,v,b);    
+     led(57,r,v,b);
+     led(58,r,v,b);
+     led(59,r,v,b);
+   
+   case 3:  
+   led(17,r,v,b);
+   led(18,r,v,b);
+   led(19,r,v,b);
+   led(20,r,v,b);
+   led(21,r,v,b);
+   
+   case 4 :
+   led(34,r,v,b);
+   led(35,r,v,b);
+   led(36,r,v,b);
+   led(37,r,v,b);
+   led(38,r,v,b);
+   led(39,r,v,b);
+   
+   case 5:
+   led(49,r,v,b);
+   led(50,r,v,b);
+   led(51,r,v,b);
+   led(52,r,v,b);
+   
+   case 6:
+   led(31,r,v,b);
+   led(32,r,v,b);
+   led(33,r,v,b);
+   
+   case 7:
+   led(23,r,v,b);
+   led(24,r,v,b);
+   led(25,r,v,b);
+   led(26,r,v,b);
+   
+   case 8:
+   led(45,r,v,b);
+   led(46,r,v,b);
+   led(47,r,v,b);
+   led(48,r,v,b);
+   
+   case 9:
+   led(8,r,v,b);
+   led(9,r,v,b);
+   led(10,r,v,b);
+   led(11,r,v,b);
+   
+   case 10:
+   led(42,r,v,b);
+   led(43,r,v,b);
+   led(44,r,v,b);
+   
+   case 11:
+   led(27,r,v,b);
+   led(28,r,v,b);
+   led(29,r,v,b);
+   led(30,r,v,b);
+   
+   case 12:
+   led(40,r,v,b);
+   led(41,r,v,b);
+   led(42,r,v,b);
+   led(43,r,v,b);
+   
+       case 13:
+     led(53,r,v,b);
+     led(54,r,v,b);
+     led(55,r,v,b);   
      break;
-     
-     case 3:
-      for(int i=23; i<=27; i++){
-      led(i, r, v, b);
-      }     
-     break;
-    
-     case 4:
-      for(int i=33; i<=38; i++){
-      led(i, r, v, b);
-      }  
-     break;
-     
-     case 5:
-      for(int i=45; i<=48; i++){
-      led(i, r, v, b);
-      }   
-     break;
-     
-     case 6:
-     led(27,r,v,b);
-     led(28,r,v,b);    
-     led(29,r,v,b);
-     break;
-     
-     case 7:
-      for(int i=49; i<=52; i++){
-      led(i, r, v, b);
-      }  
-     break;
-     
-     case 8:
-      for(int i=56; i<=59; i++){
-      led(i, r, v, b);
-      }  
-     break;
-     
-     case 9:
-       for(int i=8; i<=11; i++){
-      led(i, r, v, b);
-      }  
-     break;
-     
-     case 10:
-      for(int i=8; i<=11; i++){
-      led(i, r, v, b);
-      }  
-     break;
-     
-     case 11:
-      for(int i=27; i<=30; i++){
-      led(i, 2000, 2000, 2000);
-      }  
-     break;
-     
-     case 12:
-      for(int i=40; i<=44; i++){
-      led(i, r, v, b);
-      }  
-     break;
-    
-    
+      
+     case 14:
+     led(57,r,v,b);
+     led(58,r,v,b);
+     led(59,r,v,b);
+   
+   case 15:  
+   led(17,r,v,b);
+   led(18,r,v,b);
+   led(19,r,v,b);
+   led(20,r,v,b);
+   led(21,r,v,b);
+   
+   case 16:
+   led(34,r,v,b);
+   led(35,r,v,b);
+   led(36,r,v,b);
+   led(37,r,v,b);
+   led(38,r,v,b);
+   led(39,r,v,b);
+   
+   case 17:
+   led(49,r,v,b);
+   led(50,r,v,b);
+   led(51,r,v,b);
+   led(52,r,v,b);
+   
+   case 18:
+   led(31,r,v,b);
+   led(32,r,v,b);
+   led(33,r,v,b);
+   
+   case 19:
+   led(23,r,v,b);
+   led(24,r,v,b);
+   led(25,r,v,b);
+   led(26,r,v,b);
+   
+   case 20:
+   led(45,r,v,b);
+   led(46,r,v,b);
+   led(47,r,v,b);
+   led(48,r,v,b);
+   
+   case 21:
+   led(8,r,v,b);
+   led(9,r,v,b);
+   led(10,r,v,b);
+   led(11,r,v,b);
+   
+   case 22:
+   led(42,r,v,b);
+   led(43,r,v,b);
+   led(44,r,v,b);
+   
+   case 23:
+   led(27,r,v,b);
+   led(28,r,v,b);
+   led(29,r,v,b);
+   led(30,r,v,b);
+   
+   
   } 
   
   
   
     switch(minutes){
     
-      case 10:
-        led(75,000,0,4000);
-        led(76,000,0,4000);
-        led(77,000,0,4000);
-
-     break; 
-  }
-
-
-  led(67,0,0,0);
-  led(66,0,0,0);
-  Tlc.update();
+    }
   
-  delay(100);
+
+
+/*
+
+Incrémentation des heures minutes.
+
+*/
+
+//Tlc.update();
+delay(1000);
+
+repetion++;
+
+if (repetion%60==0){ //"Si le reste de la division euclidienne est égal à 0"
+minutes++;
+}
+
+if (minutes==60){
+minutes=0;
+heure++;
+}
+
+if (heure==24){
+heure=0;
+minutes=0;
+repetion=0;
+}
+
+//La ligne suivante sert pour le test avec Processing.
+print(str(heure)+"H"+str(minutes)+"\n");
+
 }
