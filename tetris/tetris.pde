@@ -1,27 +1,12 @@
-boolean dropping=false;
-boolean game_over=false;
-boolean menu_enabled=true;
-
-int item=0; //->random !
-int stage, moved =0;
-int repeatloop=0;
-int plateau[][]=new int[13][23];
-
-int unit=20;
-int x_window=220;
-int y_window=440;
-
-float coef_agrandissement=2;
-
 
 void setup() {
   x_window=int(x_window*coef_agrandissement);
   y_window=int(y_window*coef_agrandissement);  
   unit=int(unit*coef_agrandissement);
   
-  size(x_window, y_window);
+  size(int(x_window+(100*coef_agrandissement)), y_window);
   smooth();
-  // item=int(random(0, 9));
+  // item=int(random(0, 7));
 }
 
 
@@ -117,7 +102,7 @@ void draw() {
 
 
           case 9:
-            if (moved>=(unit) && plateau[(moved/unit)][(stage/unit)-1]==0 && plateau[(moved/unit)][(stage/unit)-2]==0  && plateau[(moved/unit)][(stage/unit)-3]==0  && plateau[(moved/unit)][(stage/unit)]==0 )
+            if (moved>=(unit) && plateau[(moved/unit)-1][(stage/unit)]==0 && plateau[(moved/unit)-1][(stage/unit)-1]==0 && plateau[(moved/unit)-1][(stage/unit)-2]==0  && plateau[(moved/unit)-1][(stage/unit)-3]==0 )
               moved=moved-unit;
             break;        
 
@@ -155,7 +140,7 @@ void draw() {
             break;
 
           case 1:
-            if (moved<=(x_window-(5*unit)) && plateau[(moved/unit)][(stage/unit)+4]==0) 
+            if (moved<=(x_window-(5*unit)) && plateau[(moved/unit)+4][(stage/unit)]==0) 
               moved=moved+unit;
             break;
 
@@ -202,23 +187,23 @@ void draw() {
             break;
 
           case 10:
-            if (moved<=(x_window-(unit))) 
+            if (moved<=(x_window-(3*unit)) && plateau[(moved/unit)+2][(stage/unit)]==0 && plateau[(moved/unit)+2][(stage/unit)+1]==0 && plateau[(moved/unit)+1][(stage/unit)-1]==0  ) 
               moved=moved+unit;
             break;  
 
           case 11:
-            if (moved<=(x_window-(3*unit))) 
+            if (moved<=(x_window-(3*unit)) && plateau[(moved/unit)+2][(stage/unit)]==0 && plateau[(moved/unit)+2][(stage/unit)+1]==0 && plateau[(moved/unit)+2][(stage/unit)+2]==0) 
               moved=moved+unit;
             break;  
 
           case 12:
-            if (moved<=(x_window-(3*unit))) 
+            if (moved<=(x_window-(3*unit)) &&  plateau[(moved/unit)+2][(stage/unit)]==0 &&  plateau[(moved/unit)+2][(stage/unit)-1]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0) 
               moved=moved+unit;
             break;
             
             
           case 13:
-            if (moved<=(x_window-(2*unit))) 
+            if (moved<=(x_window-(2*unit)) && plateau[(moved/unit)+1][(stage/unit)]==0 && plateau[(moved/unit)+1][(stage/unit)+1]==0) 
               moved=moved+unit;
             break;
           }
@@ -288,7 +273,7 @@ void draw() {
 
           case 9:
             barre(moved, stage);
-            item=5;
+            item=1;
             break;      
 
           case 10:

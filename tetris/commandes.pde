@@ -20,7 +20,7 @@ switch (item){
          
                   //////////TO CHANGE
          repeatloop=stage=moved=0;
-         item=int(random(0, 9));
+         item=int(random(0, 7));
            sortie=1;
        }
      }
@@ -44,7 +44,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=0;
-         item=int(random(0, 9));
+         item=int(random(0, 7));
            sortie=1;
          
        }
@@ -69,7 +69,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 9));
+         item=int(random(0, 7));
            sortie=1;
        }
      }
@@ -95,7 +95,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 9));
+         item=int(random(0, 7));
          sortie=1;
        }
      }
@@ -120,7 +120,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 9));
+         item=int(random(0, 7));
          sortie=1;
        }
      }
@@ -145,7 +145,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 9));
+         item=int(random(0, 7));
          sortie=1;
        }
      }
@@ -170,7 +170,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 9));
+         item=int(random(0, 7));
          sortie=1;
        }
      }
@@ -196,7 +196,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 9));
+         item=int(random(0, 7));
          sortie=1;
        }
      }
@@ -222,7 +222,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 9));
+         item=int(random(0, 7));
          sortie=1;
        }
      }
@@ -248,7 +248,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 9));
+         item=int(random(0, 7));
          sortie=1;
        }
      }
@@ -271,7 +271,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 9));
+         item=int(random(0, 7));
            sortie=1;
        }
      }
@@ -295,7 +295,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 9));
+         item=int(random(0, 7));
            sortie=1;
        }
      }
@@ -318,7 +318,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 9));
+         item=int(random(0, 7));
            sortie=1;
        }
      }
@@ -343,7 +343,7 @@ switch (item){
          
          //////////TO CHANGE
          repeatloop=stage=moved=item=0;
-         item=int(random(0, 9));
+         item=int(random(0, 7));
            sortie=1;
        }
      }
@@ -382,6 +382,8 @@ void verifier(){
      }
      
      if(plein==true){
+       score=score+100;
+       
        for(int i=0; i<11; i++){
           plateau[i][j]=0;
        }

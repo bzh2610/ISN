@@ -110,6 +110,8 @@ rect(x,y+unit,unit,unit);
 rect(x+unit,y+unit,unit,unit);
 }
 
+///////////////////////
+
 void barre(int x, int y){
 fill(0,230,230);
 rect(x,y,unit,unit);
@@ -135,6 +137,18 @@ carrés (blocs) de différentes couleurs.
 */
 
 void loadblocks(){
+  
+  stroke(120,120,120);
+ 
+  for(int y=0; y<22; y++){
+    line(0, y*unit, x_window, y*unit);
+  }
+ 
+ for(int i=0; i<=11; i++){
+   line(i*unit, 0, i*unit, y_window);
+  }
+      
+  
  for(int y=0; y<22; y++){
         for(int i=0; i<11; i++){ //dessine
       if(plateau[i][y]==0){
@@ -189,6 +203,12 @@ void loadblocks(){
   
   print("\n\n\n\n");
   
+ textAlign(CENTER);
+ fill(255,255,255);
+textSize(16);
+ text("Score: "+str(score), x_window+(50*coef_agrandissement), height/2);
+
+  print(width);
 }
 
 
