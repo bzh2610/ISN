@@ -21,7 +21,7 @@ void loop()
     
     Tlc.clear();
 
-  for(int i=0; i<128; i=i+5){
+  for(int i=0; i<44; i=i+5){
   led(1+i, 255,0,0);
   led(2+i, 200,70,0);
   led(3+i, 255, 200,0);
@@ -30,6 +30,6 @@ void loop()
   }
   
   Tlc.update(); 
-  delay(100); 
+  delay(1000); 
 }
 

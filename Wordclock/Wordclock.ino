@@ -1,6 +1,6 @@
-//#include "Tlc5940.h"
-int minutes=55;
-int heure=23;
+#include "Tlc5940.h"
+int heure=15;
+int minutes=15;
 int r=4000;
 int v=0;
 int b=0;
@@ -8,27 +8,27 @@ int repetion=0;
 
 void led(int number, int r, int v, int b){
   
-    /*if(number<22){
+    if(number<22){
     Tlc.set(number*3-3+16, r*2);
     Tlc.set(number*3-2+16, v*2);
     Tlc.set(number*3-1+16, b*2);
     }
     
     else{
-    Tlc.set(number*3-2+16, r*2);
-    Tlc.set(number*3-1+16, v*2);
-    Tlc.set(number*3-0+16, b*2);
-    }*/
+    Tlc.set(number*3-5+16, r*2);
+    Tlc.set(number*3-4+16, v*2);
+    Tlc.set(number*3-3+16, b*2);
+    }
 }
 
   
 void setup()
 { 
- // Tlc.init(); 
+ Tlc.init(); 
 }
 
-void draw(){    
-// Tlc.clear();
+void loop(){    
+ Tlc.clear();
   
   switch(heure){
     case 0:
@@ -209,67 +209,67 @@ void draw(){
     switch(minutes){
       
       case 1 : //cinq
-      for (int i=95, i<=98, i++){
+      for (int i=95; i<=98; i++){
         led(i,r,v,b);
       }
       
       case 2: //dix
-      for (int i=75, i<=77, i++){
+      for (int i=75; i<=77; i++){
         led(i,r,v,b);
       }
       
       case 3: // et quart
       led(67,r,v,b);
       led(68,r,v,b);
-      for (int i=84, i<=88, i++){
+      for (int i=84; i<=88; i++){
         led(i,r,v,b);
       }
       
       case 4: //vingt
-      for (int i=89, i<=93, i++){
+      for (int i=89; i<=93; i++){
         led(i,r,v,b);
       }
       
       case 5: //vingt-cinq
-      for (int i=89, i<=98, i++){
+      for (int i=89; i<=98; i++){
         led(i,r,v,b);
       }
       
       case 6: //et demi
       led(67,r,v,b);
       led(68,r,v,b);
-      for (int i=80, i<=83, i++){
+      for (int i=80; i<=83; i++){
         led(i,r,v,b);
       }
       
       case 7: //moins vingt-cinq
-      for (int i=69, i<=73, i++){
+      for (int i=69; i<=73; i++){
         led(i,r,v,b);
       }
-      for (int i=89, i<=98, i++){
+      for (int i=89; i<=98; i++){
         led(i,r,v,b);
       }
       
       case 8://moins vingt
-      for (int i=69, i<=73, i++){
+      for (int i=69; i<=73; i++){
         led(i,r,v,b);
       }
-      for (int i=89, i<=93, i++){
+      for (int i=89; i<=93; i++){
         led(i,r,v,b);
       }
       
       case 9: //moins le quart
-      for (int i=69, i<=73, i++){
+      for (int i=69; i<=73; i++){
         led(i,r,v,b);
       }
       led(78,r,v,b);
       led(79,r,v,b);
-      for (int i=84, i<=88, i++){
+      for (int i=84; i<=88; i++){
         led(i,r,v,b);
       }
       
       case 10: //moins dix
-      for (int i=69, i<=73, i++){
+      for (int i=69; i<=73; i++){
         led(i,r,v,b);
       }
       led(75,r,v,b);
@@ -277,10 +277,10 @@ void draw(){
       led(77,r,v,b);
       
       case 11: //moins cinq
-      for (int i=69, i<=73, i++){
+      for (int i=69; i<=73; i++){
         led(i,r,v,b);
       }
-      for (int i=95, i<=98, i++){
+      for (int i=95; i<=98; i++){
         led(i,r,v,b);
       }
        
@@ -294,7 +294,7 @@ Incrémentation des heures minutes.
 
 */
 
-//Tlc.update();
+Tlc.update();
 delay(1000);
 
 repetion++;
@@ -314,7 +314,6 @@ minutes=0;
 repetion=0;
 }
 
-//La ligne suivante sert pour le test avec Processing.
-print(str(heure)+"H"+str(minutes)+"\n");
+
 
 }
