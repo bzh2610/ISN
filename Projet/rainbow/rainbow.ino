@@ -1,35 +1,67 @@
+/*
+
+RAINBOW teste le bon fonctinnnement des LEDS sur le circuit
+
+*/
+
 #include "Tlc5940.h"
 
-void led(int number, int r, int v, int b){
+void led(int number, int r, int v, int b) {
+
+    if(number<22){
+    Tlc.set(number*3-3+16, r*2);
+    Tlc.set(number*3-2+16, v*2);
+    Tlc.set(number*3-1+16, b*2);
+    }
     
-    Tlc.set(number*3-3, b);
-    Tlc.set(number*3-2, v);
-    Tlc.set(number*3-1, r);
+    else{
+    Tlc.set(number*3-5+16, r*2);
+    Tlc.set(number*3-4+16, v*2);
+    Tlc.set(number*3-3+16, b*2);
+    }
 }
 
 
-  int j=255;
-  int k=1;
-  
+int j=0;
+int i=33;
+
 void setup()
-{ 
-  Tlc.init();  
+{
+  Tlc.init();
 }
 
 void loop()
 {
-    
-    Tlc.clear();
 
-  for(int i=0; i<44; i=i+5){
-  led(1+i, 255,0,0);
-  led(2+i, 200,70,0);
-  led(3+i, 255, 200,0);
-  led(4+i, 0,255,0);  
-  led(5+i, 0,255,255);   
+  Tlc.clear();
+
+  if (j == 0) {
+    led(1+i,275, 0, 0);
+    led(2+i,325, 20, 0);
+    led(3+i,325, 50, 0);
+    led(4+i,0, 255, 0);
+    led(5+i,0, 255, 255);
+    led(6+i,150, 0, 150);
+    if (i<=55)
+      i++;
+    else
+      j=1;
   }
-  
-  Tlc.update(); 
-  delay(1000); 
-}
 
+  else {
+    led(1+i, 275, 0, 0);
+    led(2+i, 325, 20, 0);
+    led(3+i, 325, 50, 0);
+    led(4+i, 0, 255, 0);
+    led(5+i, 0, 255, 255);
+    led(6+i, 150, 0, 150);
+    if (i>=1)
+      i--;
+    else
+      j=0;
+  }
+
+  Tlc.update();
+
+  delay(100);
+}
